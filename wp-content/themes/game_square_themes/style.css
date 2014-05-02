@@ -142,13 +142,41 @@ table {
 
 /*if screen like mobile or tablet or something like that with width is 480 to 767px then : follow design will take place*/
 @media only screen and (min-width:480px) and (max-width: 767px)
-{
+{		 .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column { height:auto; }
 	/* if mobile version make main-nav class none display and make show-nav class display instead*/
 	.main-nav ul li
 	{
 		float: none;
 	}
-	
+	 .main-nav ul ul {
+   		position:relative;
+     	top:0;
+     	opacity:1;
+     }
+	  .main-nav ul ul a{
+     	padding:0 20px 0 40px;
+     	width:auto;
+     	line-height:50px;
+     }
+
 	.main-nav ul li
 	{
 		float: none;

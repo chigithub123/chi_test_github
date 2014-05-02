@@ -20,7 +20,7 @@
 		<div class="container">
 			<header>
 			<!-- "five columns" means the width of the div-->
-				<div class = "five columns">
+				<div class = "five columns clearfix">
 					<a href="<?php echo get_option('home');?>"><img src="<?php bloginfo('template_url');?>/img/logo.png" title="<?php bloginfo('title');?>"</a>
 				</div>
 				<!-- "sixteen columns" means the width of the div-->
