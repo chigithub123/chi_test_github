@@ -18,6 +18,7 @@
 		<?php wp_enqueue_script("jquery");?>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/skeleton.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css" />
 		<?php wp_head();?>
 		
 	</head>	
@@ -51,21 +52,21 @@
 		
 		<!-- here is jquery-->
 		<script>
-			<!-- when #show-nav on click run this function-->
-			jQuery("#show-nav").click(function()
-			{
-			<!-- when i click show-nav id, i want it display main-nav slowly-->
-			<!-- as we put wp_jQuery above anything else so it will be top priority when it conflict with css-->
-				jQuery(".main-nav").toggle("slow");
-				jQuery("#close-nav").show("slow");
-			});
-			
-			jQuery("#close-nav").click(function()
-			{
-				jQuery(".main-nav").toggle("slow");
-				jQuery("#close-nav").hide("slow");
-			});
-			
-		</script>
+				<!-- when #show-nav on click run this function-->
+				jQuery("#show-nav").click(function()
+				{
+				<!-- when i click show-nav id, i want it display main-nav slowly-->
+				<!-- as we put wp_jQuery above anything else so it will be top priority when it conflict with css-->
+					jQuery(".main-nav").toggle("slow");
+					jQuery("#close-nav").show("slow");
+				});
+				
+				jQuery("#close-nav").click(function()
+				{
+					jQuery(".main-nav").toggle("slow");
+					jQuery("#close-nav").hide("slow");
+				});
+				
+			</script>
 	</body>
 </html>
