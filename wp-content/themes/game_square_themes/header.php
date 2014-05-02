@@ -3,6 +3,11 @@
 	<head>
 		<title>
 			<?php
+//?????????????????????????????
+// 			wp_title('|','true','right');
+// definiation of wp_ function () such as wp_enqueue_script("jquery"); wp_head()
+// can't downlaod skeleton.css from skeleton webpage
+//???????????????????????????????????????	
 				wp_title('|','true','right');
 				bloginfo('name');
 			?>
@@ -20,9 +25,12 @@
 		<div class="container">
 			<header>
 			<!-- "five columns" means the width of the div-->
-				<div class = "five columns clearfix">
+			<!-- five columns is the function from skeleton.css which has been design to design px (table) int he page-->
+				<div class = "five columns">
 					<a href="<?php echo get_option('home');?>"><img src="<?php bloginfo('template_url');?>/img/logo.png" title="<?php bloginfo('title');?>"</a>
 				</div>
+				
+				
 				<!-- "sixteen columns" means the width of the div-->
 				<div class="sixteen columns main-nav" id="show-nav">
 					<a href="#">Toggle Navigation</a>
@@ -30,9 +38,12 @@
 				<div class="sixteen columns" id="close-nav">
 					<a href="#">Close</a>
 				</div>
-				<div class="sixteen columns nav-bar">
 				
-					<?php wp_nav_menu(array('container_class'=>'main-nav','container'=>'nav'));?>
+				
+				<div class="sixteen columns nav-bar">
+					<?php 
+						wp_nav_menu(array('container_class'=>'main-nav','container'=>'nav'));
+					?>
 				
 				</div>
 			</header>
