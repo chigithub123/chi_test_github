@@ -21,9 +21,10 @@
 	<ul class="slides">
 		
 		<?php
-		query_posts(array('category_name' => 'Featured', 'posts_per_page' => 3));
+		$args  = array('category_name'=>'Featured', 'posts_per_page' => -1);
+		$query = new WP_Query($args);
 		// if post make a loop to perform below task
-		if(have_posts()) : while(have_posts()) : the_post();
+		 while($query->have_posts()) : $query->the_post();
 		?>
 	<!-- below will be repeat every time we have post-->
 		  <li class="featured-game">
@@ -37,9 +38,9 @@
 	  
 		<?php
 		    endwhile;
-			endif;
+			
 			// reset the query , back to normal
-			wp_reset_query();
+			//wp_reset_query();
 		?>
 	</ul>
   </div>

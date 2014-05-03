@@ -1,0 +1,390 @@
+/**
+* theme name: Son
+* Author : Son Nguyen
+* Description: Son's blog 
+*/
+@import url(http://fonts.googleapis.com/css?family=Gafata);
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body{
+	line-height:1;
+	font-family: sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family:sans-serif;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+h1{
+	font-size:1.7em;
+}
+h2{
+	font-size:1.6em;
+}
+h3{
+	font-size:1.5em;
+}
+h4{
+	font-size:1.4em;
+}
+h5{
+	font-size:1.3em;
+}
+h6{
+	font-size:1.2em;
+}
+a{
+	text-decoration: none;
+}
+.container .five.columns a img.logo{
+	width: 150px;
+}
+
+.nav-bar{
+	background: #4b4b4b;
+	height:50px;
+	margin-bottom: 10px;
+}
+
+.main-nav ul, .main-nav li{
+	display:inline;
+}
+.main-nav a{
+	padding:0 20px 0 20px;
+	text-decoration: none;
+	line-height: 50px;
+	color:#ffffff;
+	font-family:cursive;
+	display:block;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover{
+	background-color: #56c928;
+}
+
+
+.main-nav ul ul a{
+	width:135px;
+	line-height:40px;
+	padding:0 20px;
+	display:block;
+}
+
+.main-nav ul li {
+	position: relative;
+	float:left;
+}
+
+.main-nav ul ul{
+	position:absolute;
+	top: -999999px;
+	left:0;
+	opacity:0;
+	background: #4b4b4b;
+	text-align:left;
+	z-index: 1;
+	padding:0;
+}
+
+.main-nav ul li:hover > ul{
+	position:absolute;
+	top:100%;
+	opacity:1;	
+}
+#show-nav{
+	display:none;background:#4b4b4b;
+}
+
+#close-nav{
+	display:none;background:#4b4b4b;text-align:right;font-family: sans-serif;
+}
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+    @media only screen and (max-width: 767px) {
+         
+         .container .one.column,
+        .container .one.columns,
+        .container .two.columns,
+        .container .three.columns,
+        .container .four.columns,
+        .container .five.columns,
+        .container .six.columns,
+        .container .seven.columns,
+        .container .eight.columns,
+        .container .nine.columns,
+        .container .ten.columns,
+        .container .eleven.columns,
+        .container .twelve.columns,
+        .container .thirteen.columns,
+        .container .fourteen.columns,
+        .container .fifteen.columns,
+        .container .sixteen.columns,
+        .container .one-third.column,
+        .container .two-thirds.column { height:auto; }
+    .main-nav{
+    display: none;
+    }
+    .main-nav ul ul {
+   		position:relative;
+     	top:0;
+     	opacity:1;
+     }
+    .main-nav ul li:hover > ul {
+    	position:relative;	
+		top:0;	
+    }
+     .main-nav ul ul a{
+     	padding:0 20px 0 40px;
+     	width:auto;
+     	line-height:50px;
+     }
+
+    
+    .main-nav ul li{
+    	float:none;
+    }
+    #show-nav{
+	display:block;
+	}
+    
+    
+	.new-games .game-thumb{
+	width:100%;
+	float:none;
+	}
+	.new-games .game-thumb img{
+	float:none;
+	margin-right:10px;
+	}
+	.new-games .game-thumb div{
+		float:right;
+		width:60%;
+	}	
+}
+
+/*     This is the CSS for the slider */
+.featured-game{
+	position: relative;
+	z-index: 1;
+	font-family: sans-serif;
+}
+.featured-game .caption {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+	padding: 10px;
+	color: #fff;
+	width: 40%;
+	background: #000;
+	opacity: .6;
+	line-height: 18px;
+	font-size: 14px;
+	z-index: 2;
+}
+.featured-game .game-title {
+	font-size: 22px;
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 10px;
+}
+.featured-game a:visited {
+	color: #fff;
+}
+.featured-game .playnow {
+	text-align: center;
+	text-decoration: none;
+	background: #56C928;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+}
+.internal-x{
+	background:#e3e3e3;
+	display:block;
+	height:250px;
+}
+.sidebar-list h1,
+.new-games h1{
+	background:#4b4b4b;
+	color:#ffffff;
+	padding: 6px;
+	font-family:cursive;
+}
+.new-games ul{
+	padding:0;
+}
+.new-games .game-thumb{
+	display:block;
+	float:left;width:49%;
+	margin-bottom:10px;
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	-o-transition:all .25s ease;
+	transition:all .25s ease;
+	border-left: 3px solid transparent;
+}
+
+.sidebar-list .game-thumb{
+	float:none;
+	width:100%;	
+	border:none;
+}
+.sidebar-list .game-thumb a{
+height:auto;
+}
+.sidebar-list .game-thumb img{
+	width:100%;
+	height:auto;	
+}
+.sidebar-list ul{
+	margin:0;
+	padding:0;
+}
+
+.sidebar-list .game-thumb img{
+	float:left;
+	margin-right:10px;
+}
+.sidebar-list .game-thumb .title-desc{
+	vertical-align: top;
+	font-weight: bolder;
+	color:#4b4b4b;
+		
+}
+
+.sidebar-list .game-thumb p{
+	margin:0;
+	padding:0;
+	color:#4b4b4b;
+	text-decoration:none;
+}
+
+
+
+.new-games .game-thumb img{
+	float:left;
+	margin-right:10px;
+}
+.new-games .game-thumb .title-desc{
+	vertical-align: top;
+	font-weight: bolder;
+	color:#4b4b4b;
+		
+}
+.new-games .game-thumb div{
+	margin-top:5px;
+}
+.new-games .game-thumb:hover{
+	background:#eee;
+	border-left: 5px solid #56c928;
+}
+.new-games .game-thumb p{
+	margin:0;
+	padding:0;
+	color:#4b4b4b;
+	text-decoration:none;
+}
+@media only screen and (max-width: 767px) {
+	.featured-game .caption {
+		width: 85%;
+		opacity: .70;
+	}	
+	.new-games .game-thumb{
+	width:100%;
+	float:none;
+	}
+	.new-games .game-thumb img{
+	float:none;
+	margin-right:10px;
+	}
+	.new-games .game-thumb div{
+		float:right;
+		width:60%;
+	}	
+}
+@media only screen and (max-width: 479px){
+	.featured-game p {
+		display: none;
+	}
+	.new-games .game-thumb{
+	width:100%;
+	float:none;
+	}
+	.new-games .game-thumb img{
+	float:none;
+	margin-right:10px;
+	}
+	.new-games .game-thumb div{
+		float:right;
+		width:50%;
+	}	
+}
+
+footer.sixteen.columns{
+	background: none repeat scroll 0 0 #393939;
+	color:#fff;
+}
+footer.sixteen.columns a{
+	text-decoration: none;color:#A8A8A8;font-family: "BebasNeueRegular",Arial,Helvetica,sans-serif
+}
+footer .one-third.column{
+	margin:0 6px;
+	
+}
+footer .one-third.column ul{
+	padding:0;
+	
+}
+
+.game-container p{
+}
+.game-container h1{
+	color:#fff;
+	padding:10px;
+	background:#212121;
+}
+
+aside.main-sidebar .x-container{
+	padding-top: 10px;
+	height:auto;
+}
+aside.main-sidebar .x-container h2{
+    color: #212121;
+    margin: 0;
+    padding: 11px 10px;
+}
+aside.main-sidebar .x-container ul{
+	padding:0 13px;
+}
+
+
+.comment.depth-1{
+	margin-bottom: 20px;
+	
+}
