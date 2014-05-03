@@ -187,8 +187,13 @@ table {
 .featured-game{
 	position: relative;
 	/* z-index is 3D layer, z-index = 1 means we put it at the back layer so we couldn't see it*/
+	/* z-index is not used to make it disappear but it is used to overlap each layer*/
+	/*in this case, caption has z-index: 2 which means it is in the front (closer to us)
+	featured-game has z-index : 1 which means furthure from us (behind caption)*/
+	/* but we don't want caption to block featured game so we make caption's opacity: .6 so we can see through it*/
 	z-index: 1;
 	font-family: sans-serif;
+	height: 160px;
 }
 
 /* the black post square*/
@@ -200,7 +205,7 @@ table {
 	padding: 10px;
 	color: #fff;
 	width: 40%;
-	background: #000;
+	background: blue;
 	/* opacity: 0.6 so we can it it a little bit*/
 	opacity: .6;
 	line-height: 18px;
